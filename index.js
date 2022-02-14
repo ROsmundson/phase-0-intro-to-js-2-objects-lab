@@ -1,32 +1,33 @@
-// Write your solution in this file!
+// I want to keep track of a company's employees.
+
+//I want to store each employee as an Object.
+
 const employee = {
-    name: 'Teagan',
-    streetAddress: '123 street street', 
-}
-employee;
+        name: 'name',
+        streetAddress: 'address'
+    }
 
-function updateEmployeeWithKeyAndValue(obj, key, value){
-    const newEmployee = { ...obj };
-    newEmployee[key] = value;
+function updateEmployeeWithKeyAndValue(employee, key, value) {
+    const newEmployee = { ...employee }
+    newEmployee[key] = value
     return newEmployee
-}
+    }
 
-function destructivelyUpdateEmployeeWithKeyAndValue(obj, key, value){
-    obj[key] = value
-    return obj
-}
-
-function deleteFromEmployeeByKey(key, value){
-    const newEmployee = {}
-    newEmployee[key] = value;
-    return newEmployee
-}
-
-function destructivelyDeleteFromEmployeeByKey(obj, key, value){
-    employee[key] = value;
+function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value){
+    employee[key] = value
     return employee
 }
 
-    
-      
-      
+function deleteFromEmployeeByKey(employee, key){
+    const newEmployee = { ...employee }
+    delete newEmployee[key]
+    return newEmployee
+    }
+
+function destructivelyDeleteFromEmployeeByKey(employee, key) {
+    delete employee[key]
+    return employee
+
+}
+
+
